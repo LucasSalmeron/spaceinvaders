@@ -10,7 +10,7 @@ class Enemigo extends FlxSprite
 
 	public function new() 
 	{
-		
+		super.create();
 	}
 	
 }
