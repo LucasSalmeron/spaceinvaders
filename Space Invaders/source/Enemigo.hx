@@ -1,4 +1,4 @@
-package Clases;
+package;
 import flixel.FlxSprite;
 
 /**
