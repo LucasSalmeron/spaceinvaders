@@ -57,8 +57,8 @@ class ApplicationMain {
 				
 				#if mobile
 				
-				forceWidth = 640;
-				forceHeight = 576;
+				forceWidth = 576;
+				forceHeight = 640;
 				
 				container = new flash.display.Sprite ();
 				barA = new flash.display.Sprite ();
@@ -127,7 +127,7 @@ class ApplicationMain {
 				}
 				
 			},
-			640, 576, 
+			576, 640, 
 			60, 
 			0,
 			(true ? flash.Lib.HARDWARE : 0) |
@@ -248,13 +248,13 @@ class ScaledStage extends flash.display.Stage {
 	
 	private override function get_stageHeight ():Int {
 		
-		return 576;
+		return 640;
 	
 	}
 	
 	private override function get_stageWidth ():Int {
 		
-		return 640;
+		return 576;
 	
 	}
 	
@@ -325,11 +325,11 @@ class ApplicationMain {
 		wx.App.boot (function () {
 			
 			
-			frame = wx.Frame.create (null, null, "Space Invaders", null, { width: 640, height: 576 });
+			frame = wx.Frame.create (null, null, "Space Invaders", null, { width: 576, height: 640 });
 			
 			
 			#if openfl
-			var stage = wx.NMEStage.create (frame, null, null, { width: 640, height: 576 });
+			var stage = wx.NMEStage.create (frame, null, null, { width: 576, height: 640 });
 			#end
 			
 			var hasMain = false;
@@ -511,7 +511,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "12",
+			build: "50",
 			company: "HaxeFlixel",
 			file: "Space Invaders",
 			fps: 60,
@@ -529,13 +529,13 @@ class ApplicationMain {
 					display: 0,
 					fullscreen: false,
 					hardware: true,
-					height: 576,
+					height: 640,
 					parameters: "{}",
 					resizable: true,
 					stencilBuffer: false,
 					title: "Space Invaders",
 					vsync: true,
-					width: 640,
+					width: 576,
 					x: null,
 					y: null
 				},
@@ -545,7 +545,7 @@ class ApplicationMain {
 		
 		#if (js && html5)
 		#if (munit || utest)
-		openfl.Lib.embed (null, 640, 576, "null");
+		openfl.Lib.embed (null, 576, 640, "null");
 		#end
 		#else
 		create ();
